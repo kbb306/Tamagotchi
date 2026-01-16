@@ -1,51 +1,25 @@
-class Tamagotchi(var InitName : String) {
-    var Name = InitName;
-    var Age : Int = 0
-    var Hunger : Int = 100
-        set(value) {
-            if (value < 0) {
-                field = 0
-            }
-            else if (value > 100) {
-                field = 100
-            }
-            else {
-                field = value
-            }
+import Tamagotchi
+fun main() {
+    print("Enter a name for your tamagotchi: ")
+    val name: String = readln()
+    val pet = Tamagotchi(name)
+    var choice = 0
+    while(choice != 5) {
+        println("1. Display tamagotchi")
+        println("2. Play with tamagotchi")
+        println("3. Feed tamagotchi")
+        println("4. Put tamagotchi to bed")
+        println("5. Quit game")
+        print("Enter your choice: ")
+        choice = readln().toInt()
+        when (choice) {
+            1 -> pet.display()
+            2 -> pet.Play()
+            3 -> pet.Eat()
+            4 -> pet.Sleep()
+            5 -> println("Goodbye!")
+            else -> println("Invalid choice")
         }
-        get() {
-            return field
-        }
-    var Happiness : Int = 0
-        set(value) {
-            if (value < 0) {
-                field = 0
-            }
-            else if (value > 100) {
-                field = 100
-            }
-            else {
-                field = value
-            }
-        }
-        get() {
-            return field
-        }
-    var Energy : Int = 50
-        set(value) {
-            if (value < 0) {
-                field = 0
-            }
-            else if (value > 100) {
-                field = 100
-            }
-            else {
-                field = value
-            }
-        }
-        get() {
-            return field
-
-        }
+    }
 
 }
