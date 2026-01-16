@@ -1,4 +1,3 @@
-import Tamagotchi
 fun main() {
     print("Enter a name for your tamagotchi: ")
     val name: String = readln()
