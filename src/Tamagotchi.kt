@@ -56,7 +56,7 @@ class Tamagotchi(var initName : String) {
         println("Energy: " + this.energy + "/100")
     }
 
-    fun Eat() {
+    fun eat() {
         if (hunger == 0) {
             println(this.name + " is full.")
         }
@@ -69,7 +69,7 @@ class Tamagotchi(var initName : String) {
         }
     }
 
-    fun Play() {
+    fun play() {
         if (this.hunger > 50) {
             println(this.name + " is too hungry to play.")
         }
@@ -86,7 +86,7 @@ class Tamagotchi(var initName : String) {
         }
     }
 
-    fun Sleep() {
+    fun sleep() {
         if (this.hunger > 70) {
             println(this.name + " is too hungry to sleep.")
         }

@@ -14,9 +14,9 @@ fun main() {
         choice = readln().toInt()
         when (choice) {
             1 -> pet.display()
-            2 -> pet.Play()
-            3 -> pet.Eat()
-            4 -> pet.Sleep()
+            2 -> pet.play()
+            3 -> pet.eat()
+            4 -> pet.sleep()
             5 -> println("Goodbye!")
             else -> println("Invalid choice")
         }
